@@ -100,6 +100,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // pruebas_index
+        if ($pathinfo === '/pruebas/index') {
+            return array (  '_controller' => 'AppBundle\\Controller\\PruebasController::indexAction',  '_route' => 'pruebas_index',);
+        }
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

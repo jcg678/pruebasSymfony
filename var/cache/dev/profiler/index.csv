@@ -1,0 +1,10 @@
+901ed5,::1,GET,http://localhost/symfony/symfony3/web/app_dev.php/pruebas/index,1476048047,e307b6,200
+e307b6,::1,GET,http://localhost/symfony/symfony3/web/app_dev.php/pruebas/index,1476048047,,500
+f5aa86,::1,GET,http://localhost/symfony/symfony3/web/app_dev.php/pruebas/index,1476048069,4f24da,200
+4f24da,::1,GET,http://localhost/symfony/symfony3/web/app_dev.php/pruebas/index,1476048069,,500
+b3c716,::1,GET,http://localhost/symfony/symfony3/web/app_dev.php/pruebas/index,1476048072,ef8c71,200
+ef8c71,::1,GET,http://localhost/symfony/symfony3/web/app_dev.php/pruebas/index,1476048072,,500
+fd23e6,::1,GET,http://localhost/symfony/symfony3/web/app_dev.php/pruebas/index,1476048119,c08b19,200
+c08b19,::1,GET,http://localhost/symfony/symfony3/web/app_dev.php/pruebas/index,1476048120,,500
+3657df,::1,GET,http://localhost/symfony/symfony3/web/app_dev.php/pruebas/index,1476048222,,200
+f54ea3,::1,GET,http://localhost/symfony/symfony3/web/app_dev.php/pruebas/index,1476048610,,200

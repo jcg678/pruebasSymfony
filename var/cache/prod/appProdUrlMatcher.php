@@ -36,6 +36,16 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
         }
 
+        // holamundo
+        if ($pathinfo === '/hello-world') {
+            return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::HolaMundoAction',  '_route' => 'holamundo',);
+        }
+
+        // preubas
+        if ($pathinfo === '/pruebas/index') {
+            return array (  '_controller' => 'AppBundle\\Controller\\PruebasController::indexAction',  '_route' => 'preubas',);
+        }
+
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();
     }
 }
