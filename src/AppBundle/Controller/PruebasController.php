@@ -9,11 +9,11 @@ use Symfony\Component\HttpFoundation\Request;
 class PruebasController extends Controller
 {
     
-    public function indexAction(Request $request)
+    public function indexAction(Request $request,$name,$subname)
     {
         // replace this example code with whatever you need
         return $this->render('AppBundle:pruebas:index.html.twig', [
-            'texto' => 'Desde EL controlador',
+            'texto' => $name." - ".$subname
         ]);
     }
     

@@ -27,6 +27,11 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
         $context = $this->context;
         $request = $this->request;
 
+        // pruebas_index
+        if ($pathinfo === '/pruebas/index') {
+            return array (  '_controller' => 'AppBundle\\Controller\\PruebasController::indexAction',  '_route' => 'pruebas_index',);
+        }
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
@@ -39,11 +44,6 @@ class appProdUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirecta
         // holamundo
         if ($pathinfo === '/hello-world') {
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::HolaMundoAction',  '_route' => 'holamundo',);
-        }
-
-        // preubas
-        if ($pathinfo === '/pruebas/index') {
-            return array (  '_controller' => 'AppBundle\\Controller\\PruebasController::indexAction',  '_route' => 'preubas',);
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

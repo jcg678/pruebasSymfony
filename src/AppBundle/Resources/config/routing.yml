@@ -1,3 +1,3 @@
 pruebas_index:
-    path : /pruebas/index
-    defaults: { _controller: AppBundle:Pruebas:index}
+    path : /pruebas/{name}/{subname}
+    defaults: { _controller: AppBundle:Pruebas:index, subname:valor_defecto}

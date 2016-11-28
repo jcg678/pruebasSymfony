@@ -8,3 +8,11 @@ fd23e6,::1,GET,http://localhost/symfony/symfony3/web/app_dev.php/pruebas/index,1
 c08b19,::1,GET,http://localhost/symfony/symfony3/web/app_dev.php/pruebas/index,1476048120,,500
 3657df,::1,GET,http://localhost/symfony/symfony3/web/app_dev.php/pruebas/index,1476048222,,200
 f54ea3,::1,GET,http://localhost/symfony/symfony3/web/app_dev.php/pruebas/index,1476048610,,200
+4502be,127.0.0.1,GET,http://localhost:8000/,1480371533,,200
+c1176a,127.0.0.1,GET,http://localhost:8000/pruebas/index,1480371598,,200
+cec0f3,127.0.0.1,GET,http://localhost:8000/pruebas/paco/pepe,1480372252,,200
+70daf9,127.0.0.1,GET,http://localhost:8000/pruebas/paco/pepe,1480372255,,200
+b5899c,127.0.0.1,GET,http://localhost:8000/pruebas/paco/pepe,1480372263,6c7611,200
+6c7611,127.0.0.1,GET,http://localhost:8000/pruebas/paco/pepe,1480372263,,500
+490fe8,127.0.0.1,GET,http://localhost:8000/pruebas/paco/pepe,1480372318,,200
+7ae5b8,127.0.0.1,GET,http://localhost:8000/pruebas/paco,1480372402,,200
