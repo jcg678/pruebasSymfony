@@ -101,7 +101,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // pruebas_index
-        if (0 === strpos($pathinfo, '/pruebas') && preg_match('#^/pruebas/(?P<lang>es|wb|fr)(?:/(?P<name>\\w+)(?:/(?P<page>\\d+))?)?$#s', $pathinfo, $matches)) {
+        if (0 === strpos($pathinfo, '/pruebas') && preg_match('#^/pruebas/(?P<lang>es|wb|fr)(?:/(?P<name>[a-zA-z]*)(?:/(?P<page>\\d+))?)?$#s', $pathinfo, $matches)) {
             if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
                 $allow = array_merge($allow, array('GET', 'HEAD'));
                 goto not_pruebas_index;

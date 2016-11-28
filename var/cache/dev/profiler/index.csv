@@ -49,3 +49,6 @@ fd9882,127.0.0.1,GET,http://localhost:8000/pruebas/hola/3,1480373147,,200
 7078b6,127.0.0.1,GET,http://localhost:8000/pruebas/es/4/3,1480373571,,200
 fc3d31,127.0.0.1,GET,http://localhost:8000/pruebas/al/4/3,1480373580,40e4f0,200
 40e4f0,127.0.0.1,GET,http://localhost:8000/pruebas/al/4/3,1480373580,,404
+c6477e,127.0.0.1,GET,http://localhost:8000/pruebas/es/4/3,1480373849,b9b8b6,200
+b9b8b6,127.0.0.1,GET,http://localhost:8000/pruebas/es/4/3,1480373849,,404
+a9d088,127.0.0.1,GET,http://localhost:8000/pruebas/es/paco/3,1480373855,,200

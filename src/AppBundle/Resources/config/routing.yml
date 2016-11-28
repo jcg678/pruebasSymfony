@@ -3,7 +3,6 @@ pruebas_index:
     defaults: { _controller: AppBundle:Pruebas:index, name:valor_defecto, page:1}
     methods: [GET]
     requirements:
-         lang: 
-         name: \w+
+         name: "[a-zA-z]*"
          page: \d+
          lang: es|wb|fr
