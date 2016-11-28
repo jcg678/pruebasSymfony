@@ -101,9 +101,15 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // pruebas_index
-        if (0 === strpos($pathinfo, '/pruebas') && preg_match('#^/pruebas/(?P<name>[^/]++)(?:/(?P<subname>[^/]++))?$#s', $pathinfo, $matches)) {
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'pruebas_index')), array (  '_controller' => 'AppBundle\\Controller\\PruebasController::indexAction',  'subname' => 'valor_defecto',));
+        if (0 === strpos($pathinfo, '/pruebas') && preg_match('#^/pruebas/(?P<lang>es|wb|fr)(?:/(?P<name>\\w+)(?:/(?P<page>\\d+))?)?$#s', $pathinfo, $matches)) {
+            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'HEAD'));
+                goto not_pruebas_index;
+            }
+
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'pruebas_index')), array (  '_controller' => 'AppBundle\\Controller\\PruebasController::indexAction',  'name' => 'valor_defecto',  'page' => 1,));
         }
+        not_pruebas_index:
 
         // homepage
         if (rtrim($pathinfo, '/') === '') {
