@@ -68,3 +68,4 @@ beead8,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/1,1480456263,,302
 739903,127.0.0.1,GET,http://localhost:8000/holamundo?prueba=true,1480456263,,404
 8b6873,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/1,1480456317,,302
 ff1688,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/7,1480456397,,302
+c01d20,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/6?hola=9,1480456604,,302

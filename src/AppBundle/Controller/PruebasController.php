@@ -13,7 +13,12 @@ class PruebasController extends Controller
     {
         //return $this->redirect($this->generateUrl("homepage"));
         //return $this->redirect($this->container->get("router")->getContext()->getBaseUrl()."/hello-world?prueba=true");
-        return $this->redirect($request->getBaseUrl()."/hello-world?prueba=true");
+        //return $this->redirect($request->getBaseUrl()."/hello-world?prueba=true");
+        // para get
+        var_dump($request->query->get("hola"));
+        // en caso de post
+        var_dump($request->get("hola-post"));
+        die();
         
         // replace this example code with whatever you need
         return $this->render('AppBundle:pruebas:index.html.twig', [
