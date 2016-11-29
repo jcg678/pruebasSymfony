@@ -100,10 +100,15 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // mi_homepage
+        if ($pathinfo === '/mi-bundle') {
+            return array (  '_controller' => 'MiBundle\\Controller\\DefaultController::indexAction',  '_route' => 'mi_homepage',);
+        }
+
         // pruebas_index
         if (0 === strpos($pathinfo, '/pruebas') && preg_match('#^/pruebas/(?P<lang>es|wb|fr)(?:/(?P<name>[a-zA-z]*)(?:/(?P<page>\\d+))?)?$#s', $pathinfo, $matches)) {
-            if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
-                $allow = array_merge($allow, array('GET', 'HEAD'));
+            if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
                 goto not_pruebas_index;
             }
 
