@@ -70,3 +70,10 @@ beead8,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/1,1480456263,,302
 ff1688,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/7,1480456397,,302
 c01d20,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/6?hola=9,1480456604,,302
 ea7437,127.0.0.1,GET,http://localhost:8000/mi-bundle,1480457775,,200
+0d3bc6,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/6?hola=7,1480458335,43de47,200
+43de47,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/6?hola=7,1480458336,,500
+6a9058,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/6?hola=7,1480458463,0d093b,200
+0d093b,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/6?hola=7,1480458463,,500
+fa0b83,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/6?hola=7,1480458488,,200
+cc8938,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/6?hola=7,1480458522,,200
+fa9ff7,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/6?hola=7,1480458564,,200
