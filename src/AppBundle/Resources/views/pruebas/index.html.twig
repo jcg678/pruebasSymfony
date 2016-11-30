@@ -2,4 +2,25 @@
 {% block container %}
     {{parent()}}
     {{texto}}
+    <hr>
+    {{fruta.manzana}}
+    {% if fruta.pera starts with "r" %}
+    {{fruta.manzana}}
+    {% endif %}
+    {% if fruta.pera ends with "a" %}
+    {{fruta.manzana}}
+    {% endif %}
+    
+   
+    {% set variable = "Hola Twig"%}
+    <hr>
+    {{variable}}
+    <hr>
+    {% if productos|length > 0  %}
+    <ul>
+    {% for producto in productos %}
+     <li>{{ producto.producto }}-{{producto.precio}}</li>
+    {% endfor %}
+    </ul>
+    {% endif %}
 {% endblock %}
