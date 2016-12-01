@@ -94,3 +94,5 @@ baf388,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/1,1480523435,82ec26,2
 cee508,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/1,1480523453,,200
 d5ada8,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/1,1480523584,,200
 87094c,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/1,1480523626,,200
+1e79ba,127.0.0.1,GET,http://localhost:8000/,1480630225,,200
+8d1b56,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/1,1480630296,,200
