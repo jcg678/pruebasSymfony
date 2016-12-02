@@ -21,20 +21,20 @@ class __TwigTemplate_cfb0c29a5fca23d34beb000ccc942072111429e661556c5b76d05286e4a
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_e77275021dd4438db7b22025790b1d1bb362e36856c827e9397b1836028d003c = $this->env->getExtension("native_profiler");
-        $__internal_e77275021dd4438db7b22025790b1d1bb362e36856c827e9397b1836028d003c->enter($__internal_e77275021dd4438db7b22025790b1d1bb362e36856c827e9397b1836028d003c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AppBundle:pruebas:index.html.twig"));
+        $__internal_c4f8b8942186773d906a1329a45fd74dcec974d79ab418192ae5be8264f1f864 = $this->env->getExtension("native_profiler");
+        $__internal_c4f8b8942186773d906a1329a45fd74dcec974d79ab418192ae5be8264f1f864->enter($__internal_c4f8b8942186773d906a1329a45fd74dcec974d79ab418192ae5be8264f1f864_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "AppBundle:pruebas:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_e77275021dd4438db7b22025790b1d1bb362e36856c827e9397b1836028d003c->leave($__internal_e77275021dd4438db7b22025790b1d1bb362e36856c827e9397b1836028d003c_prof);
+        $__internal_c4f8b8942186773d906a1329a45fd74dcec974d79ab418192ae5be8264f1f864->leave($__internal_c4f8b8942186773d906a1329a45fd74dcec974d79ab418192ae5be8264f1f864_prof);
 
     }
 
     // line 2
     public function block_container($context, array $blocks = array())
     {
-        $__internal_9b761ce939920f203d7a9a4d834c545d6f75b4e8b4e0ae4cc0cef6af7b26fefd = $this->env->getExtension("native_profiler");
-        $__internal_9b761ce939920f203d7a9a4d834c545d6f75b4e8b4e0ae4cc0cef6af7b26fefd->enter($__internal_9b761ce939920f203d7a9a4d834c545d6f75b4e8b4e0ae4cc0cef6af7b26fefd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "container"));
+        $__internal_8817c3f9aa4916ce2065d6092952e0b25b5b79c8a6a5de38c242a6cde57162cc = $this->env->getExtension("native_profiler");
+        $__internal_8817c3f9aa4916ce2065d6092952e0b25b5b79c8a6a5de38c242a6cde57162cc->enter($__internal_8817c3f9aa4916ce2065d6092952e0b25b5b79c8a6a5de38c242a6cde57162cc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "container"));
 
         // line 3
         echo "    ";
@@ -51,25 +51,26 @@ class __TwigTemplate_cfb0c29a5fca23d34beb000ccc942072111429e661556c5b76d05286e4a
         echo "
     ";
         // line 7
-        if ((is_string($__internal_5c74acae640731b613286b518517228fa4662fc8d94382b4ebb2abe58c27694a = $this->getAttribute((isset($context["fruta"]) ? $context["fruta"] : $this->getContext($context, "fruta")), "pera", array())) && is_string($__internal_6c41471568a29ce2c07cd1b1b90c2de810bab1efb805ddb2c1db61f8c9b8d9d0 = "r") && ('' === $__internal_6c41471568a29ce2c07cd1b1b90c2de810bab1efb805ddb2c1db61f8c9b8d9d0 || 0 === strpos($__internal_5c74acae640731b613286b518517228fa4662fc8d94382b4ebb2abe58c27694a, $__internal_6c41471568a29ce2c07cd1b1b90c2de810bab1efb805ddb2c1db61f8c9b8d9d0)))) {
+        if ((is_string($__internal_c032d4ba0fd5b4dbd6921dc3c567dfc9f5cb576df06ae85b29404aab4d5ecc6b = $this->getAttribute((isset($context["fruta"]) ? $context["fruta"] : $this->getContext($context, "fruta")), "pera", array())) && is_string($__internal_1a420fa9d69628cbfb0e87e9f6732486e0141916d6b01bdc669356b8525efab1 = "r") && ('' === $__internal_1a420fa9d69628cbfb0e87e9f6732486e0141916d6b01bdc669356b8525efab1 || 0 === strpos($__internal_c032d4ba0fd5b4dbd6921dc3c567dfc9f5cb576df06ae85b29404aab4d5ecc6b, $__internal_1a420fa9d69628cbfb0e87e9f6732486e0141916d6b01bdc669356b8525efab1)))) {
             // line 8
-            echo "    ";
+            echo "        ";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["fruta"]) ? $context["fruta"] : $this->getContext($context, "fruta")), "manzana", array()), "html", null, true);
             echo "
     ";
         }
         // line 10
         echo "    ";
-        if ((is_string($__internal_4d6f51d269cf2daac8c8d7504d43ff18200575dd75057f3c77b6e26f25a4a350 = $this->getAttribute((isset($context["fruta"]) ? $context["fruta"] : $this->getContext($context, "fruta")), "pera", array())) && is_string($__internal_d5f73400412b4fe453f6fe6a78838329494dd9d6dc00b6a5860c8470afe56a65 = "a") && ('' === $__internal_d5f73400412b4fe453f6fe6a78838329494dd9d6dc00b6a5860c8470afe56a65 || $__internal_d5f73400412b4fe453f6fe6a78838329494dd9d6dc00b6a5860c8470afe56a65 === substr($__internal_4d6f51d269cf2daac8c8d7504d43ff18200575dd75057f3c77b6e26f25a4a350, -strlen($__internal_d5f73400412b4fe453f6fe6a78838329494dd9d6dc00b6a5860c8470afe56a65))))) {
+        if ((is_string($__internal_b0df86be4ae047ae2c635bf3ff610262989e395b1f03a6c3a2c8f01650e3200a = $this->getAttribute((isset($context["fruta"]) ? $context["fruta"] : $this->getContext($context, "fruta")), "pera", array())) && is_string($__internal_2ff5f2cbebffdc8919dcd98dae8bd59dbf19574f2502d5db843a4e0582ca15aa = "a") && ('' === $__internal_2ff5f2cbebffdc8919dcd98dae8bd59dbf19574f2502d5db843a4e0582ca15aa || $__internal_2ff5f2cbebffdc8919dcd98dae8bd59dbf19574f2502d5db843a4e0582ca15aa === substr($__internal_b0df86be4ae047ae2c635bf3ff610262989e395b1f03a6c3a2c8f01650e3200a, -strlen($__internal_2ff5f2cbebffdc8919dcd98dae8bd59dbf19574f2502d5db843a4e0582ca15aa))))) {
             // line 11
             echo "    ";
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["fruta"]) ? $context["fruta"] : $this->getContext($context, "fruta")), "manzana", array()), "html", null, true);
             echo "
-    ";
+        ";
         }
         // line 13
-        echo "    
-   
+        echo "    ";
+        // line 14
+        echo "   
     ";
         // line 15
         $context["variable"] = "Hola Twig";
@@ -84,29 +85,70 @@ class __TwigTemplate_cfb0c29a5fca23d34beb000ccc942072111429e661556c5b76d05286e4a
         // line 19
         if ((twig_length_filter($this->env, (isset($context["productos"]) ? $context["productos"] : $this->getContext($context, "productos"))) > 0)) {
             // line 20
-            echo "    <ul>
-    ";
+            echo "        <ul>
+        ";
             // line 21
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable((isset($context["productos"]) ? $context["productos"] : $this->getContext($context, "productos")));
             foreach ($context['_seq'] as $context["_key"] => $context["producto"]) {
                 // line 22
-                echo "     <li>";
+                echo "         <li>";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["producto"], "producto", array()), "html", null, true);
                 echo "-";
                 echo twig_escape_filter($this->env, $this->getAttribute($context["producto"], "precio", array()), "html", null, true);
                 echo "</li>
-    ";
+        ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['producto'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
             // line 24
-            echo "    </ul>
+            echo "        </ul>
     ";
         }
+        // line 26
+        echo "    ";
+        $context["fecha"] = twig_date_converter($this->env, "-7 Days", "Europe/Madrid");
+        // line 27
+        echo "    ";
+        echo $this->env->getExtension('dump')->dump($this->env, $context, (isset($context["fecha"]) ? $context["fecha"] : $this->getContext($context, "fecha")));
+        echo "
+    ";
+        // line 28
+        echo twig_include($this->env, $context, "AppBundle:pruebas:partial.html.twig");
+        echo "
+    ";
+        // line 29
+        echo twig_escape_filter($this->env, max(array(0 => 34, 1 => 45, 2 => 123, 3 => 3)), "html", null, true);
+        echo "<br>
+    ";
+        // line 30
+        echo twig_escape_filter($this->env, min(array(0 => 34, 1 => 45, 2 => 123, 3 => 3)), "html", null, true);
+        echo "<br>
+    ";
+        // line 31
+        echo twig_escape_filter($this->env, twig_random($this->env, 1000), "html", null, true);
+        echo "<br>
+    ";
+        // line 32
+        echo twig_escape_filter($this->env, twig_random($this->env, array(0 => "manzana", 1 => "pera", 2 => "otro")), "html", null, true);
+        echo "
+    ";
+        // line 33
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(range(0, 25, 5));
+        foreach ($context['_seq'] as $context["_key"] => $context["i"]) {
+            // line 34
+            echo "    ";
+            echo twig_escape_filter($this->env, $context["i"], "html", null, true);
+            echo "<br>
+    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['i'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
         
-        $__internal_9b761ce939920f203d7a9a4d834c545d6f75b4e8b4e0ae4cc0cef6af7b26fefd->leave($__internal_9b761ce939920f203d7a9a4d834c545d6f75b4e8b4e0ae4cc0cef6af7b26fefd_prof);
+        $__internal_8817c3f9aa4916ce2065d6092952e0b25b5b79c8a6a5de38c242a6cde57162cc->leave($__internal_8817c3f9aa4916ce2065d6092952e0b25b5b79c8a6a5de38c242a6cde57162cc_prof);
 
     }
 
@@ -122,7 +164,7 @@ class __TwigTemplate_cfb0c29a5fca23d34beb000ccc942072111429e661556c5b76d05286e4a
 
     public function getDebugInfo()
     {
-        return array (  105 => 24,  94 => 22,  90 => 21,  87 => 20,  85 => 19,  80 => 17,  77 => 16,  75 => 15,  71 => 13,  65 => 11,  62 => 10,  56 => 8,  54 => 7,  50 => 6,  45 => 4,  40 => 3,  34 => 2,  11 => 1,);
+        return array (  142 => 34,  138 => 33,  134 => 32,  130 => 31,  126 => 30,  122 => 29,  118 => 28,  113 => 27,  110 => 26,  106 => 24,  95 => 22,  91 => 21,  88 => 20,  86 => 19,  81 => 17,  78 => 16,  76 => 15,  73 => 14,  71 => 13,  65 => 11,  62 => 10,  56 => 8,  54 => 7,  50 => 6,  45 => 4,  40 => 3,  34 => 2,  11 => 1,);
     }
 }
 /* {% extends "::layout.html.twig" %}*/
@@ -132,22 +174,32 @@ class __TwigTemplate_cfb0c29a5fca23d34beb000ccc942072111429e661556c5b76d05286e4a
 /*     <hr>*/
 /*     {{fruta.manzana}}*/
 /*     {% if fruta.pera starts with "r" %}*/
-/*     {{fruta.manzana}}*/
+/*         {{fruta.manzana}}*/
 /*     {% endif %}*/
 /*     {% if fruta.pera ends with "a" %}*/
 /*     {{fruta.manzana}}*/
-/*     {% endif %}*/
-/*     */
+/*         {% endif %}*/
+/*     {# comentarios de codigo #}*/
 /*    */
 /*     {% set variable = "Hola Twig"%}*/
 /*     <hr>*/
 /*     {{variable}}*/
 /*     <hr>*/
 /*     {% if productos|length > 0  %}*/
-/*     <ul>*/
-/*     {% for producto in productos %}*/
-/*      <li>{{ producto.producto }}-{{producto.precio}}</li>*/
-/*     {% endfor %}*/
-/*     </ul>*/
+/*         <ul>*/
+/*         {% for producto in productos %}*/
+/*          <li>{{ producto.producto }}-{{producto.precio}}</li>*/
+/*         {% endfor %}*/
+/*         </ul>*/
 /*     {% endif %}*/
+/*     {% set fecha = date("-7 Days","Europe/Madrid") %}*/
+/*     {{ dump (fecha) }}*/
+/*     {{include ('AppBundle:pruebas:partial.html.twig')}}*/
+/*     {{ max([34,45,123,3])}}<br>*/
+/*     {{ min([34,45,123,3])}}<br>*/
+/*     {{ random(1000)}}<br>*/
+/*     {{random(["manzana","pera","otro"]) }}*/
+/*     {% for i in range(0,25,5) %}*/
+/*     {{i}}<br>*/
+/*     {% endfor %}*/
 /* {% endblock %}*/

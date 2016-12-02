@@ -5,22 +5,32 @@
     <hr>
     {{fruta.manzana}}
     {% if fruta.pera starts with "r" %}
-    {{fruta.manzana}}
+        {{fruta.manzana}}
     {% endif %}
     {% if fruta.pera ends with "a" %}
     {{fruta.manzana}}
-    {% endif %}
-    
+        {% endif %}
+    {# comentarios de codigo #}
    
     {% set variable = "Hola Twig"%}
     <hr>
     {{variable}}
     <hr>
     {% if productos|length > 0  %}
-    <ul>
-    {% for producto in productos %}
-     <li>{{ producto.producto }}-{{producto.precio}}</li>
-    {% endfor %}
-    </ul>
+        <ul>
+        {% for producto in productos %}
+         <li>{{ producto.producto }}-{{producto.precio}}</li>
+        {% endfor %}
+        </ul>
     {% endif %}
+    {% set fecha = date("-7 Days","Europe/Madrid") %}
+    {{ dump (fecha) }}
+    {{include ('AppBundle:pruebas:partial.html.twig')}}
+    {{ max([34,45,123,3])}}<br>
+    {{ min([34,45,123,3])}}<br>
+    {{ random(1000)}}<br>
+    {{random(["manzana","pera","otro"]) }}
+    {% for i in range(0,25,5) %}
+    {{i}}<br>
+    {% endfor %}
 {% endblock %}
