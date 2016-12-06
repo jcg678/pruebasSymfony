@@ -26,6 +26,7 @@
     {% set fecha = date("-7 Days","Europe/Madrid") %}
      {% set texto = "   dsfds ,,," %}
      {{ texto|trim(",")}}
+     {{ texto|addText(777)}}
     {{ fecha.date|date("d-m-y") }}
     {{include ('AppBundle:pruebas:partial.html.twig')}}
     {{ max([34,45,123,3])}}<br>
