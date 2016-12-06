@@ -24,7 +24,9 @@
         </ul>
     {% endif %}
     {% set fecha = date("-7 Days","Europe/Madrid") %}
-    {{ dump (fecha) }}
+     {% set texto = "   dsfds ,,," %}
+     {{ texto|trim(",")}}
+    {{ fecha.date|date("d-m-y") }}
     {{include ('AppBundle:pruebas:partial.html.twig')}}
     {{ max([34,45,123,3])}}<br>
     {{ min([34,45,123,3])}}<br>
