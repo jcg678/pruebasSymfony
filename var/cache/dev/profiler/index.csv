@@ -145,3 +145,16 @@ c35233,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/1,1481027722,,200
 e8632e,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/1,1481041357,,200
 9eef80,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/1,1481041540,,200
 8edbe4,127.0.0.1,GET,http://localhost:8000/pruebas/es/hola/1,1481373921,,200
+931ae6,127.0.0.1,GET,http://localhost:8000/,1481461507,,200
+1afeed,127.0.0.1,GET,http://localhost:8000/pruebas/add,1481461665,6167b6,200
+6167b6,127.0.0.1,GET,http://localhost:8000/pruebas/add,1481461665,,500
+a2457e,127.0.0.1,GET,http://localhost:8000/pruebas/add,1481461795,e83aef,200
+e83aef,127.0.0.1,GET,http://localhost:8000/pruebas/add,1481461795,,500
+18ac52,127.0.0.1,GET,http://localhost:8000/pruebas/add,1481461847,9a3492,200
+9a3492,127.0.0.1,GET,http://localhost:8000/pruebas/add,1481461847,,500
+0ff67e,127.0.0.1,GET,http://localhost:8000/pruebas/read,1481471565,a728f3,200
+a728f3,127.0.0.1,GET,http://localhost:8000/pruebas/read,1481471565,,500
+5d1423,127.0.0.1,GET,http://localhost:8000/pruebas/read,1481471591,891e59,200
+891e59,127.0.0.1,GET,http://localhost:8000/pruebas/read,1481471591,,500
+649901,127.0.0.1,GET,http://localhost:8000/pruebas/read,1481471603,3b7a7c,200
+3b7a7c,127.0.0.1,GET,http://localhost:8000/pruebas/read,1481471603,,500

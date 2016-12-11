@@ -105,16 +105,29 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'MiBundle\\Controller\\DefaultController::indexAction',  '_route' => 'mi_homepage',);
         }
 
-        // pruebas_index
-        if (0 === strpos($pathinfo, '/pruebas') && preg_match('#^/pruebas/(?P<lang>es|wb|fr)(?:/(?P<name>[a-zA-z]*)(?:/(?P<page>\\d+))?)?$#s', $pathinfo, $matches)) {
-            if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
-                $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
-                goto not_pruebas_index;
+        if (0 === strpos($pathinfo, '/pruebas')) {
+            // pruebas_index
+            if (preg_match('#^/pruebas/(?P<lang>es|wb|fr)(?:/(?P<name>[a-zA-z]*)(?:/(?P<page>\\d+))?)?$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_pruebas_index;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pruebas_index')), array (  '_controller' => 'AppBundle\\Controller\\PruebasController::indexAction',  'name' => 'valor_defecto',  'page' => 1,));
+            }
+            not_pruebas_index:
+
+            // pruebas_add
+            if ($pathinfo === '/pruebas/add') {
+                return array (  '_controller' => 'AppBundle\\Controller\\PruebasController::addAction',  '_route' => 'pruebas_add',);
             }
 
-            return $this->mergeDefaults(array_replace($matches, array('_route' => 'pruebas_index')), array (  '_controller' => 'AppBundle\\Controller\\PruebasController::indexAction',  'name' => 'valor_defecto',  'page' => 1,));
+            // pruebas_lectura
+            if ($pathinfo === '/pruebas/read') {
+                return array (  '_controller' => 'AppBundle\\Controller\\PruebasController::readAction',  '_route' => 'pruebas_lectura',);
+            }
+
         }
-        not_pruebas_index:
 
         // homepage
         if (rtrim($pathinfo, '/') === '') {

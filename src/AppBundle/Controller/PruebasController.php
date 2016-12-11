@@ -5,6 +5,7 @@ namespace AppBundle\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use AppBundle\Entity\Curso;
 
 class PruebasController extends Controller
 {
@@ -35,6 +36,33 @@ class PruebasController extends Controller
         ]);
     }
     
+    public function addAction(){
+        $curso = new Curso();
+        $curso->setTitulo("Pruebas Symfony");
+        $curso->setDescripcion("Curso ampliacion");
+        $curso->setPrecio(60);
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($curso);
+        $flush=$em->flush();
+        if($flush != null){
+            echo "El curso bo se ha creado bien";
+        }else{
+            echo "El curso se ha creado correctamente";
+        }
+        die();
+    }
+    
+    public function readAction(){
+        $em = $this->getDoctrine()->getManager();
+        $cursos_repo = $em->getRepository("AppBundle:Curso");
+        $cursos = $cursos_repo->findAll();
+        foreach($cursos as $curso){
+            echo $curso->getTitulo()."<br>";
+            echo $curso->getDescripcion()."<br>";
+            echo $curso->getPrecio()."<br><hr>";
+        }
+        die();
+    }
     
     
 }
