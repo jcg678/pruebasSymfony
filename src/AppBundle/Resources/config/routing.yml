@@ -18,6 +18,9 @@ pruebas_lectura:
 pruebas_actulizar:
     path : /pruebas/update/{id}/{titulo}/{descripcion}/{precio}
     defaults: { _controller: AppBundle:Pruebas:update}
+pruebas_borrar:
+    path : /pruebas/borrar/{id}
+    defaults: { _controller: AppBundle:Pruebas:delete}
   
 
          

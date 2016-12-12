@@ -81,4 +81,19 @@ class PruebasController extends Controller
        die();
    } 
     
+    public function deleteAction($id){
+        $em = $this->getDoctrine()->getManager();
+        $cursos_repo = $em->getRepository("AppBundle:Curso");
+        $curso = $cursos_repo->find($id);
+        $em->remove($curso);
+        $flush=$em->flush();
+        
+         if($flush!=null){
+            echo "El curso no se ha borrado!!";
+        }else{
+            echo "El curso se ha borrado correctamente";
+        }
+       die();
+    }
+    
 }

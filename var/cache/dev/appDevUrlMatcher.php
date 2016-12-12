@@ -132,6 +132,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'pruebas_actulizar')), array (  '_controller' => 'AppBundle\\Controller\\PruebasController::updateAction',));
             }
 
+            // pruebas_borrar
+            if (0 === strpos($pathinfo, '/pruebas/borrar') && preg_match('#^/pruebas/borrar/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'pruebas_borrar')), array (  '_controller' => 'AppBundle\\Controller\\PruebasController::deleteAction',));
+            }
+
         }
 
         // homepage
