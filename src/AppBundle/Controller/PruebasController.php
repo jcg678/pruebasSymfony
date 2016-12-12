@@ -64,5 +64,21 @@ class PruebasController extends Controller
         die();
     }
     
+   public function updateAction($id, $titulo, $descripcion, $precio){
+        $em = $this->getDoctrine()->getManager();
+        $cursos_repo = $em->getRepository("AppBundle:Curso");
+        $curso = $cursos_repo->find($id);
+        $curso->setTitulo($titulo);
+        $curso->setDescripcion($precio);
+        $em->persist($curso);
+        $flush=$em->flush();
+        
+        if($flush!=null){
+            echo "El curso no se ha actulizado!!";
+        }else{
+            echo "El curso se ha actulizado correctamente";
+        }
+       die();
+   } 
     
 }

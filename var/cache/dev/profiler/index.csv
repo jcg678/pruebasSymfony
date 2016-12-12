@@ -158,3 +158,10 @@ a728f3,127.0.0.1,GET,http://localhost:8000/pruebas/read,1481471565,,500
 891e59,127.0.0.1,GET,http://localhost:8000/pruebas/read,1481471591,,500
 649901,127.0.0.1,GET,http://localhost:8000/pruebas/read,1481471603,3b7a7c,200
 3b7a7c,127.0.0.1,GET,http://localhost:8000/pruebas/read,1481471603,,500
+edef93,127.0.0.1,GET,http://localhost:8000/,1481562611,,200
+ee7dbd,127.0.0.1,GET,http://localhost:8000/read,1481562614,8c8a15,200
+8c8a15,127.0.0.1,GET,http://localhost:8000/read,1481562614,,404
+c2b065,127.0.0.1,GET,http://localhost:8000/preubas/read,1481562622,e423e6,200
+e423e6,127.0.0.1,GET,http://localhost:8000/preubas/read,1481562622,,404
+733090,127.0.0.1,GET,http://localhost:8000/pruebas/read,1481562629,dc793a,200
+dc793a,127.0.0.1,GET,http://localhost:8000/pruebas/read,1481562629,,500
