@@ -165,3 +165,7 @@ c2b065,127.0.0.1,GET,http://localhost:8000/preubas/read,1481562622,e423e6,200
 e423e6,127.0.0.1,GET,http://localhost:8000/preubas/read,1481562622,,404
 733090,127.0.0.1,GET,http://localhost:8000/pruebas/read,1481562629,dc793a,200
 dc793a,127.0.0.1,GET,http://localhost:8000/pruebas/read,1481562629,,500
+2b9854,127.0.0.1,GET,http://localhost:8000/pruebas/hola/2,1481727858,88100c,200
+88100c,127.0.0.1,GET,http://localhost:8000/pruebas/hola/2,1481727858,,404
+c679fc,127.0.0.1,GET,http://localhost:8000/pruebas/read,1481728068,a17453,200
+a17453,127.0.0.1,GET,http://localhost:8000/pruebas/read,1481728068,,500

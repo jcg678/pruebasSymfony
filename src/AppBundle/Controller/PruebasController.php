@@ -55,7 +55,11 @@ class PruebasController extends Controller
     public function readAction(){
         $em = $this->getDoctrine()->getManager();
         $cursos_repo = $em->getRepository("AppBundle:Curso");
-        $cursos = $cursos_repo->findAll();
+       // $cursos = $cursos_repo->findAll();
+        
+       // $cursos = $cursos_repo->findBy(array("precio"=>"60"));//equivalente a where
+            $cursos = $cursos_repo->findOneByPrecio("60");
+        dump($cursos);
         foreach($cursos as $curso){
             echo $curso->getTitulo()."<br>";
             echo $curso->getDescripcion()."<br>";
