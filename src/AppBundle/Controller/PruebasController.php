@@ -58,7 +58,7 @@ class PruebasController extends Controller
        // $cursos = $cursos_repo->findAll();
         
        // $cursos = $cursos_repo->findBy(array("precio"=>"60"));//equivalente a where
-            $cursos = $cursos_repo->findOneByPrecio("60");
+        $cursos = $cursos_repo->findOneByPrecio("60");//el primero que vale 60
         dump($cursos);
         foreach($cursos as $curso){
             echo $curso->getTitulo()."<br>";
@@ -98,6 +98,20 @@ class PruebasController extends Controller
             echo "El curso se ha borrado correctamente";
         }
        die();
+    }
+    public function nativeSqlAction(){
+        $em = $this->getDoctrine()->getEntityManager();
+        $db = $em->getConnection();
+        $query = "select * from cursos";
+        $stmt = $db->prepare($query);
+        $params = array();
+        $stmt->execute($params);
+        $cursos = $stmt->fetchAll();
+        foreach($cursos as $curso){
+            echo $curso["titulo"]."<br>";
+            
+        }
+        die();
     }
     
 }

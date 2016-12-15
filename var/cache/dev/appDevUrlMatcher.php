@@ -137,6 +137,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->mergeDefaults(array_replace($matches, array('_route' => 'pruebas_borrar')), array (  '_controller' => 'AppBundle\\Controller\\PruebasController::deleteAction',));
             }
 
+            // pruebas_native
+            if ($pathinfo === '/pruebas/nativo') {
+                return array (  '_controller' => 'AppBundle\\Controller\\PruebasController::nativeSqlAction',  '_route' => 'pruebas_native',);
+            }
+
         }
 
         // homepage

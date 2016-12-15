@@ -169,3 +169,9 @@ dc793a,127.0.0.1,GET,http://localhost:8000/pruebas/read,1481562629,,500
 88100c,127.0.0.1,GET,http://localhost:8000/pruebas/hola/2,1481727858,,404
 c679fc,127.0.0.1,GET,http://localhost:8000/pruebas/read,1481728068,a17453,200
 a17453,127.0.0.1,GET,http://localhost:8000/pruebas/read,1481728068,,500
+2ee7ed,127.0.0.1,GET,http://localhost:8000/pruebas/nativo,1481815319,5ea7f3,200
+5ea7f3,127.0.0.1,GET,http://localhost:8000/pruebas/nativo,1481815320,,500
+3d7b26,127.0.0.1,GET,http://localhost:8000/pruebas/nativo,1481815340,429590,200
+429590,127.0.0.1,GET,http://localhost:8000/pruebas/nativo,1481815340,,500
+657817,127.0.0.1,GET,http://localhost:8000/pruebas/nativo,1481815366,43d02a,200
+43d02a,127.0.0.1,GET,http://localhost:8000/pruebas/nativo,1481815366,,500

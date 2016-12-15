@@ -21,6 +21,9 @@ pruebas_actulizar:
 pruebas_borrar:
     path : /pruebas/borrar/{id}
     defaults: { _controller: AppBundle:Pruebas:delete}
-  
+
+pruebas_native:
+    path : /pruebas/nativo
+    defaults: { _controller: AppBundle:Pruebas:nativeSql}
 
          
