@@ -180,3 +180,5 @@ a17453,127.0.0.1,GET,http://localhost:8000/pruebas/read,1481728068,,500
 cfff7e,127.0.0.1,GET,http://localhost:8000/read,1482101719,,404
 6bd3b7,127.0.0.1,GET,http://localhost:8000/pruebas/native,1482101809,ca44b5,200
 ca44b5,127.0.0.1,GET,http://localhost:8000/pruebas/native,1482101809,,404
+b8fe7d,127.0.0.1,GET,http://localhost:8000/pruebas/nativo,1482102190,73d793,200
+73d793,127.0.0.1,GET,http://localhost:8000/pruebas/nativo,1482102190,,500
