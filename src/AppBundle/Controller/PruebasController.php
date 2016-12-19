@@ -114,11 +114,7 @@ class PruebasController extends Controller
 //        $params = array();
 //        $stmt->execute($params);
 //        $cursos = $stmt->fetchAll();
-        $query = $cursos_repo->createQueryBuilder("c")
-            ->where("c.precio > :precio")
-            ->setParameter("precio","29")
-            ->getQuery();
-        $cursos =$query->getResult();
+       $cursos = $cursos_repo->getCursos();
         foreach($cursos as $curso){
             echo $curso->getTitulo()."<br>";
             

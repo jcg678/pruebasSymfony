@@ -182,3 +182,11 @@ cfff7e,127.0.0.1,GET,http://localhost:8000/read,1482101719,,404
 ca44b5,127.0.0.1,GET,http://localhost:8000/pruebas/native,1482101809,,404
 b8fe7d,127.0.0.1,GET,http://localhost:8000/pruebas/nativo,1482102190,73d793,200
 73d793,127.0.0.1,GET,http://localhost:8000/pruebas/nativo,1482102190,,500
+c90101,127.0.0.1,GET,http://localhost:8000/pruebas/nativo,1482184802,d308a4,200
+d308a4,127.0.0.1,GET,http://localhost:8000/pruebas/nativo,1482184802,,500
+48b0cc,127.0.0.1,GET,http://localhost:8000/pruebas/nativo,1482184963,f85952,200
+f85952,127.0.0.1,GET,http://localhost:8000/pruebas/nativo,1482184963,,500
+aca23a,127.0.0.1,GET,http://localhost:8000/pruebas/nativo,1482184980,ca9211,200
+ca9211,127.0.0.1,GET,http://localhost:8000/pruebas/nativo,1482184980,,500
+97380f,127.0.0.1,GET,http://localhost:8000/pruebas/nativo,1482184982,a07bff,200
+a07bff,127.0.0.1,GET,http://localhost:8000/pruebas/nativo,1482184982,,500
