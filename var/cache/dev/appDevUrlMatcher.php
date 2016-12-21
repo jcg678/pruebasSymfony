@@ -142,6 +142,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return array (  '_controller' => 'AppBundle\\Controller\\PruebasController::nativeSqlAction',  '_route' => 'pruebas_native',);
             }
 
+            // pruebas_form
+            if ($pathinfo === '/pruebas/form') {
+                return array (  '_controller' => 'AppBundle\\Controller\\PruebasController::formAction',  '_route' => 'pruebas_form',);
+            }
+
         }
 
         // homepage

@@ -25,5 +25,8 @@ pruebas_borrar:
 pruebas_native:
     path : /pruebas/nativo
     defaults: { _controller: AppBundle:Pruebas:nativeSql}
+pruebas_form:
+    path : /pruebas/form
+    defaults: { _controller: AppBundle:Pruebas:form}
 
          
