@@ -207,3 +207,8 @@ caa698,127.0.0.1,GET,http://localhost:8000/pruebas/form,1482358773,,500
 ffd9c8,127.0.0.1,GET,http://localhost:8000/pruebas/form,1482358859,,500
 327b75,127.0.0.1,GET,http://localhost:8000/pruebas/form,1482358876,,200
 7a0652,127.0.0.1,GET,http://localhost:8000/pruebas/form,1482359013,,200
+be402b,127.0.0.1,GET,http://localhost:8000/,1482430154,,200
+dbe951,127.0.0.1,GET,http://localhost:8000/pruebas/form,1482430165,,200
+297afe,127.0.0.1,GET,http://localhost:8000/pruebas/form,1482430278,,200
+e04688,127.0.0.1,GET,http://localhost:8000/pruebas/form,1482430505,,200
+06cba8,127.0.0.1,GET,http://localhost:8000/pruebas/form,1482430577,,200
