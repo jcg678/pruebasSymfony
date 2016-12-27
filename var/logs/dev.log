@@ -868,3 +868,7 @@
 [2016-12-27 16:05:32] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
 [2016-12-27 16:05:40] request.INFO: Matched route "pruebas_validate_email". {"route_parameters":{"_controller":"AppBundle\\Controller\\PruebasController::validarEmailAction","email":"pacoo@out.es","_route":"pruebas_validate_email"},"request_uri":"http://localhost:8000/pruebas/validar-email/pacoo@out.es"} []
 [2016-12-27 16:05:40] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
+[2016-12-27 16:10:32] request.INFO: Matched route "pruebas_form". {"route_parameters":{"_controller":"AppBundle\\Controller\\PruebasController::formAction","_route":"pruebas_form"},"request_uri":"http://localhost:8000/pruebas/form"} []
+[2016-12-27 16:10:32] security.INFO: Populated the TokenStorage with an anonymous Token. [] []
+[2016-12-27 16:13:18] request.INFO: Matched route "pruebas_form". {"route_parameters":{"_controller":"AppBundle\\Controller\\PruebasController::formAction","_route":"pruebas_form"},"request_uri":"http://localhost:8000/pruebas/form"} []
+[2016-12-27 16:13:18] security.INFO: Populated the TokenStorage with an anonymous Token. [] []

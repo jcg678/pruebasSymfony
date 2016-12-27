@@ -31,3 +31,5 @@ e776fa,127.0.0.1,GET,http://localhost:8000/pruebas/validar-email/pacoo,148285109
 972fa2,127.0.0.1,GET,http://localhost:8000/pruebas/validar-email/pacoo,1482851091,,500
 4a4497,127.0.0.1,GET,http://localhost:8000/pruebas/validar-email/pacoo,1482851108,c02a5b,200
 c02a5b,127.0.0.1,GET,http://localhost:8000/pruebas/validar-email/pacoo,1482851108,,500
+beeba6,127.0.0.1,GET,http://localhost:8000/pruebas/form,1482851432,,200
+5e1254,127.0.0.1,GET,http://localhost:8000/pruebas/form,1482851598,,200

@@ -7,9 +7,9 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
-
+use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 
 class CursoType extends AbstractType
 {
@@ -26,7 +26,18 @@ class CursoType extends AbstractType
                 
             )))
             ->add('descripcion',TextareaType::class)
-            ->add('precio',TextType::class)
+            
+            /*->add('precio',ChoiceType::class,array(
+            "choices"=>array(
+                "hombre"=>"Hombre",
+                "mujer" =>"Mujer",
+                "cosa" => "Cosa"
+            )
+            ))*/
+            ->add('precio',CheckboxType::class,array(
+                "label" => "Mostar",
+                "required" => true
+            ))
             ->add("Guardar",SubmitType::class)
         ;
     }
