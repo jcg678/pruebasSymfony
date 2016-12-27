@@ -20,3 +20,14 @@ f1ad1e,127.0.0.1,POST,http://localhost:8000/pruebas/form,1482433134,,200
 ca4b84,127.0.0.1,POST,http://localhost:8000/pruebas/form,1482433195,,200
 9a9b0c,127.0.0.1,POST,http://localhost:8000/pruebas/form,1482433200,,200
 3d2c74,127.0.0.1,POST,http://localhost:8000/pruebas/form,1482433204,,200
+7db6a9,127.0.0.1,GET,http://localhost:8000/,1482850971,,200
+3d8961,127.0.0.1,GET,http://localhost:8000/pruebas/validar-email/pacoo,1482850983,55d61e,200
+55d61e,127.0.0.1,GET,http://localhost:8000/pruebas/validar-email/pacoo,1482850983,,404
+3cfc7f,127.0.0.1,GET,http://localhost:8000/pruebas/validar-email/pacoo,1482851050,2e9bf7,200
+2e9bf7,127.0.0.1,GET,http://localhost:8000/pruebas/validar-email/pacoo,1482851050,,404
+183ada,127.0.0.1,GET,http://localhost:8000/pruebas/validar-email,1482851057,a252a2,200
+a252a2,127.0.0.1,GET,http://localhost:8000/pruebas/validar-email,1482851057,,404
+e776fa,127.0.0.1,GET,http://localhost:8000/pruebas/validar-email/pacoo,1482851091,972fa2,200
+972fa2,127.0.0.1,GET,http://localhost:8000/pruebas/validar-email/pacoo,1482851091,,500
+4a4497,127.0.0.1,GET,http://localhost:8000/pruebas/validar-email/pacoo,1482851108,c02a5b,200
+c02a5b,127.0.0.1,GET,http://localhost:8000/pruebas/validar-email/pacoo,1482851108,,500
