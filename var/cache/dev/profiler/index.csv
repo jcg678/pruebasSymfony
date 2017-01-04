@@ -33,3 +33,12 @@ e776fa,127.0.0.1,GET,http://localhost:8000/pruebas/validar-email/pacoo,148285109
 c02a5b,127.0.0.1,GET,http://localhost:8000/pruebas/validar-email/pacoo,1482851108,,500
 beeba6,127.0.0.1,GET,http://localhost:8000/pruebas/form,1482851432,,200
 5e1254,127.0.0.1,GET,http://localhost:8000/pruebas/form,1482851598,,200
+225803,127.0.0.1,GET,http://localhost:8000/,1483542398,,200
+e37fbc,127.0.0.1,GET,http://localhost:8000/blog,1483542403,b3d3a7,200
+b3d3a7,127.0.0.1,GET,http://localhost:8000/blog,1483542403,,500
+31e5bd,127.0.0.1,GET,http://localhost:8000/blog,1483542418,a5082c,200
+a5082c,127.0.0.1,GET,http://localhost:8000/blog,1483542418,,500
+c4263a,127.0.0.1,GET,http://localhost:8000/blog,1483542525,aaa229,200
+aaa229,127.0.0.1,GET,http://localhost:8000/blog,1483542525,,500
+1f0646,127.0.0.1,GET,http://localhost:8000/blog,1483542578,fbe07e,200
+fbe07e,127.0.0.1,GET,http://localhost:8000/blog,1483542578,,500

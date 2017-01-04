@@ -3,9 +3,9 @@
 namespace BlogBundle\Entity;
 
 /**
- * Category
+ * Tag
  */
-class Category
+class Tag
 {
     /**
      * @var integer
@@ -38,7 +38,7 @@ class Category
      *
      * @param string $name
      *
-     * @return Category
+     * @return Tag
      */
     public function setName($name)
     {
@@ -62,7 +62,7 @@ class Category
      *
      * @param string $description
      *
-     * @return Category
+     * @return Tag
      */
     public function setDescription($description)
     {
@@ -81,3 +81,4 @@ class Category
         return $this->description;
     }
 }
+
