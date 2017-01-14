@@ -23,5 +23,13 @@
         <input type="hidden" name="_target_path" value="/login">
     </form>
     </div>
+
+    <div class="col-md-4">
+        <h2>Registrate</h2>
+        <hr>
+        {{ form_start(form,{'action':'','method':'POST'}) }}
+        {{ form_end(form) }}
+    </div>
+
     <div class="clear-fix"></div>
 {% endblock %}
