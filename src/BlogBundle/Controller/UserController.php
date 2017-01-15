@@ -25,28 +25,34 @@ class UserController extends Controller
         $form->handleRequest($request);
         if($form->isSubmitted()){
         if($form->isValid()){
-            $status="El usuairo se ha creado correctamente";
-            $user = new User();
-            $name = $form->get("name")->getData();
-            $user->setName($name);
-            $user->setSurname($form->get("surname")->getData());
-            $user->setEmail($form->get("email")->getData());
-            $factory = $this->get("security.encoder_factory");
-            $encoder = $factory->getEncoder($user);
-            $password = $encoder->encodePassword($form->get("password")->getData(),$user->getSalt());
-            $user->setPassword($password);
-            $user->setRole("ROLE_USER");
-            $user->setImagen(null);
+            $em=$this->getDoctrine()->getManager();
+            $user_repo=$em->getRepository("BlogBundle:User");
+            $user = $user_repo->findOneBy(array("email"=>$form->get("email")->getData()));
+            if(count($user)==0){
+                    $status="El usuairo se ha creado correctamente";
+                    $user = new User();
+                    $name = $form->get("name")->getData();
+                    $user->setName($name);
+                    $user->setSurname($form->get("surname")->getData());
+                    $user->setEmail($form->get("email")->getData());
+                    $factory = $this->get("security.encoder_factory");
+                    $encoder = $factory->getEncoder($user);
+                    $password = $encoder->encodePassword($form->get("password")->getData(),$user->getSalt());
+                    $user->setPassword($password);
+                    $user->setRole("ROLE_USER");
+                    $user->setImagen(null);
 
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($user);
-            $flush= $em->flush();
-            if($flush == null){
-                $status ="El usuario se ha creado correctamente";
+                    $em = $this->getDoctrine()->getManager();
+                    $em->persist($user);
+                    $flush= $em->flush();
+                    if($flush == null){
+                        $status ="El usuario se ha creado correctamente";
+                    }else{
+                        $status ="Usuario no creado";
+                    }
             }else{
-                $status ="Usuario no creado";
+                $status="El usuario ya existe";
             }
-
         }else{
             $status = "No te has registrado correctamente";
 
