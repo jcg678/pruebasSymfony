@@ -6,9 +6,14 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use BlogBundle\Entity\User;
 use BlogBundle\Form\UserType;
+use Symfony\Component\HttpFoundation\Session\Session;
 class UserController extends Controller
 {
+    private $session;
+    public function __construct(){
+        $this->session=new Session();
 
+    }
 
     public function loginAction(Request $request){
         $authenticacionUtils = $this->get("security.authentication_utils");
@@ -18,6 +23,7 @@ class UserController extends Controller
         $user = new User();
         $form= $this->createForm(UserType::class,$user);
         $form->handleRequest($request);
+        if($form->isSubmitted()){
         if($form->isValid()){
             $status="El usuairo se ha creado correctamente";
             $user = new User();
@@ -41,6 +47,9 @@ class UserController extends Controller
             $status = "No te has registrado correctamente";
 
         }
+        $this->session->getFlashBag()->add("status",$status);
+
+        };
         return $this->render('BlogBundle:user:login.html.twig', array(
             "error"=> $error,
             "lastUsername" => $lastUsername,

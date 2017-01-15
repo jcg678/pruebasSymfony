@@ -145,3 +145,12 @@ b4270c,127.0.0.1,GET,http://localhost:8000/login,1484421570,,200
 15809d,127.0.0.1,GET,http://localhost:8000/login,1484421587,,200
 b776a3,127.0.0.1,POST,http://localhost:8000/login_check,1484421595,,302
 4e4b52,127.0.0.1,GET,http://localhost:8000/login,1484421595,,200
+437034,127.0.0.1,GET,http://localhost:8000/,1484485247,,200
+ecec47,127.0.0.1,GET,http://localhost:8000/,1484485248,,200
+4f5645,127.0.0.1,GET,http://localhost:8000/login,1484485253,10074c,200
+10074c,127.0.0.1,GET,http://localhost:8000/login,1484485253,,500
+a7c037,127.0.0.1,GET,http://localhost:8000/login,1484485291,21da6d,200
+21da6d,127.0.0.1,GET,http://localhost:8000/login,1484485291,,500
+ec83d8,127.0.0.1,GET,http://localhost:8000/login,1484485544,,200
+370b9f,127.0.0.1,GET,http://localhost:8000/login,1484485599,,200
+1caf12,127.0.0.1,POST,http://localhost:8000/login,1484485637,,200
