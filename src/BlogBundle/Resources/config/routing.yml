@@ -11,5 +11,9 @@ blog_homepage:
     defaults: { _controller: BlogBundle:Default:index }
 
 blog_add_tag:
-    path: /tag/add
+    path: /tags/add
     defaults: {_controller: BlogBundle:Tag:add}
+
+blog_index_tag:
+    path: /tags
+    defaults: {_controller: BlogBundle:Tag:index}

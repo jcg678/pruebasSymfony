@@ -130,9 +130,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'BlogBundle\\Controller\\DefaultController::indexAction',  '_route' => 'blog_homepage',);
         }
 
-        // blog_add_tag
-        if ($pathinfo === '/tag/add') {
-            return array (  '_controller' => 'BlogBundle\\Controller\\TagController::addAction',  '_route' => 'blog_add_tag',);
+        if (0 === strpos($pathinfo, '/tags')) {
+            // blog_add_tag
+            if ($pathinfo === '/tags/add') {
+                return array (  '_controller' => 'BlogBundle\\Controller\\TagController::addAction',  '_route' => 'blog_add_tag',);
+            }
+
+            // blog_index_tag
+            if ($pathinfo === '/tags') {
+                return array (  '_controller' => 'BlogBundle\\Controller\\TagController::indexAction',  '_route' => 'blog_index_tag',);
+            }
+
         }
 
         // mi_homepage
