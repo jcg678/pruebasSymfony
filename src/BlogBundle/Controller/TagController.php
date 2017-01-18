@@ -56,6 +56,20 @@ class TagController extends Controller
         ]);
     }
 
+    public function deleteAction($id){
+        $em = $this->getDoctrine()->getManager();
+        $tag_repo=$em->getRepository("BlogBundle:Tag");
+        $tag=$tag_repo->find($id);
+        $control=count($tag->getEntryTag());
+        if($control==0){
+            $em->remove($tag);
+            $em->flush();
+        }
+
+        return $this->redirectToRoute("blog_index_tag");
+
+    }
+
     public function formAction(Request $request){
         $curso = new Curso();
         $form= $this->createForm(CursoType::class,$curso);
