@@ -171,6 +171,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // blog_add_entry
+        if ($pathinfo === '/entries/add') {
+            return array (  '_controller' => 'BlogBundle\\Controller\\EntryController::addAction',  '_route' => 'blog_add_entry',);
+        }
+
         // mi_homepage
         if ($pathinfo === '/mi-bundle') {
             return array (  '_controller' => 'MiBundle\\Controller\\DefaultController::indexAction',  '_route' => 'mi_homepage',);
