@@ -32,8 +32,8 @@ class EntryType extends AbstractType
             )))
             ->add('status',ChoiceType::class,array("label"=>"Estado","required"=>"required",
                 "choices"=>array(
-                    "public" => "publicado",
-                    "private" => "privado"
+                    "Publicado" => "public",
+                    "Privado" => "private"
                 ),
                 "attr"=>array(
                 "class"=>"form-surmname form-control",

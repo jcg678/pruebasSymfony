@@ -24,23 +24,28 @@ class EntryController extends Controller
         if($form->isSubmitted()){
             if($form->isValid()){
                 $em = $this->getDoctrine()->getManager();
-               /*
-                $category = new Category();
-                $category->setName($form->get("name")->getData());
-                $category->setDescription($form->get("description")->getData());
-                $em->persist($category);
-                $flush = $em->flush();
-
+                $category_repo=$em->getRepository("BlogBundle:Category");
+                $entry = new Entry();
+                $entry->setTitle($form->get("title")->getData());
+                $entry->setContent($form->get("content")->getData());
+                $entry->setStatus($form->get("status")->getData());
+                $entry->setImage(null);
+                $categoria=$category_repo->find($form->get("category")->getData());
+                $entry->setCategory($categoria);
+                $user=$this->getUser();
+                $entry->setUser($user);
+                $em->persist($entry);
+                $flush=$em->flush();
                 if($flush==null){
                     $status="Formulario valido";
                 }else{
                     $status="Error al añadir la categoria";
-                }*/
+                }
             }else{
                 $status = "La categoria  no se ha creado porque  hay fallos  !!";
             }
-           // $this->session->getFlashBag()->add("status",$status);
-           // return $this->redirectToRoute("blog_index_category");
+            $this->session->getFlashBag()->add("status",$status);
+            //return $this->redirectToRoute("blog_index_category");
         }
 
 
