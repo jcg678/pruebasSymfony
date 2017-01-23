@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use BlogBundle\Entity\Entry;
 use BlogBundle\Form\EntryType;
 use Symfony\Component\HttpFoundation\Session\Session;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 class EntryController extends Controller
 {
     private $session;
@@ -29,7 +30,15 @@ class EntryController extends Controller
                 $entry->setTitle($form->get("title")->getData());
                 $entry->setContent($form->get("content")->getData());
                 $entry->setStatus($form->get("status")->getData());
-                $entry->setImage(null);
+
+
+                $file=$form["image"]->getData();
+                $ext=$file->guessExtension();
+                $file_name=time().".".$ext;
+                $file->move("uploads",$file_name);
+
+                $entry->setImage($file_name);
+
                 $categoria=$category_repo->find($form->get("category")->getData());
                 $entry->setCategory($categoria);
                 $user=$this->getUser();
@@ -42,7 +51,7 @@ class EntryController extends Controller
                     $status="Error al añadir la categoria";
                 }
             }else{
-                $status = "La categoria  no se ha creado porque  hay fallos  !!";
+                $status = "La entrada  no se ha creado porque  hay fallos  !!";
             }
             $this->session->getFlashBag()->add("status",$status);
             //return $this->redirectToRoute("blog_index_category");
