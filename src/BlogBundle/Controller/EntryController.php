@@ -26,6 +26,7 @@ class EntryController extends Controller
             if($form->isValid()){
                 $em = $this->getDoctrine()->getManager();
                 $category_repo=$em->getRepository("BlogBundle:Category");
+                $entry_repo=$em->getRepository("BlogBundle:Entry");
                 $entry = new Entry();
                 $entry->setTitle($form->get("title")->getData());
                 $entry->setContent($form->get("content")->getData());
@@ -35,16 +36,29 @@ class EntryController extends Controller
                 $file=$form["image"]->getData();
                 $ext=$file->guessExtension();
                 $file_name=time().".".$ext;
+
                 $file->move("uploads",$file_name);
 
                 $entry->setImage($file_name);
 
-                $categoria=$category_repo->find($form->get("category")->getData());
-                $entry->setCategory($categoria);
+                $category=$category_repo->find($form->get("category")->getData());
+                $entry->setCategory($category);
                 $user=$this->getUser();
                 $entry->setUser($user);
+
                 $em->persist($entry);
+
                 $flush=$em->flush();
+
+                $entry_repo-> saveEntryTags(
+                    $form->get("tags")->getData(),
+                    $form->get("title")->getData(),
+                    $category,
+                    $user,
+                    $entry
+
+                );
+
                 if($flush==null){
                     $status="Formulario valido";
                 }else{
