@@ -23,6 +23,7 @@ class EntryRepository extends \Doctrine\ORM\EntityRepository
         }else{
 
         };
+        $tags.=",";
         $tags=explode(",",$tags);
         foreach($tags as $tag){
             dump($tags);
@@ -31,9 +32,10 @@ class EntryRepository extends \Doctrine\ORM\EntityRepository
                 $tag_obj = new Tag();
                 $tag_obj->setName($tag);
                 $tag_obj->setDescription($tag);
-                $em->persist($tag_obj);
-                $em->flush();
-
+                if(!empty(trim($tag))){
+                    $em->persist($tag_obj);
+                    $em->flush();
+                }
             }
             $tag = $tag_repo->findOneBy(array("name"=>$tag));
             $entryTag= new EntryTag();
