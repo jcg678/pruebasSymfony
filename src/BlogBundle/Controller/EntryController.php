@@ -16,6 +16,17 @@ class EntryController extends Controller
 
     }
 
+    public function indexAction(){
+        $em = $this->getDoctrine()->getManager();
+
+        $entry_repo=$em->getRepository("BlogBundle:Entry");
+        $entries=$entry_repo->findAll();
+        return $this->render("BlogBundle:entry:index.html.twig",[
+                'entries'=>$entries
+            ]
+
+            );
+    }
 
     public function addAction(Request $request){
         $entry = new Entry();
@@ -68,7 +79,7 @@ class EntryController extends Controller
                 $status = "La entrada  no se ha creado porque  hay fallos  !!";
             }
             $this->session->getFlashBag()->add("status",$status);
-            //return $this->redirectToRoute("blog_index_category");
+            return $this->redirectToRoute("blog_homepage");
         }
 
 

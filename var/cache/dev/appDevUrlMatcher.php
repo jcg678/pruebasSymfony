@@ -127,7 +127,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
                 return $this->redirect($pathinfo.'/', 'blog_homepage');
             }
 
-            return array (  '_controller' => 'BlogBundle\\Controller\\DefaultController::indexAction',  '_route' => 'blog_homepage',);
+            return array (  '_controller' => 'BlogBundle\\Controller\\EntryController::indexAction',  '_route' => 'blog_homepage',);
         }
 
         if (0 === strpos($pathinfo, '/tags')) {

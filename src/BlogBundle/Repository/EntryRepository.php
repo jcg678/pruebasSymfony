@@ -23,7 +23,7 @@ class EntryRepository extends \Doctrine\ORM\EntityRepository
         }else{
 
         };
-        $tags.=",";
+        //$tags.=",";
         $tags=explode(",",$tags);
         foreach($tags as $tag){
             dump($tags);
