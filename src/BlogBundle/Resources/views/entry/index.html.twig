@@ -1,4 +1,8 @@
 {%  extends "@Blog/layout.html.twig" %}
+
+{% block menu %}
+    {%   include 'BlogBundle:category:menu.categories.html.twig' with {'categories': categories}  %}
+{% endblock %}
 {% block content %}
 
     {% for message in app.session.flashbag().get('status') %}
