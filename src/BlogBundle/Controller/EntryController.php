@@ -92,5 +92,22 @@ class EntryController extends Controller
         ]);
     }
 
+    public function deleteAction($id){
+
+        $em = $this->getDoctrine()->getManager();
+        $entry_repo=$em->getRepository("BlogBundle:Entry");
+        $entry_tags_repo=$em->getRepository("BlogBundle:EntryTag");
+
+
+        $entry=$entry_repo->find($id);
+        $entry_tags =$entry_tags_repo->findBy(array('entry'=>$entry));
+        foreach($entry_tags as $entry_tag){
+            $em->remove($entry_tag);
+            $em->flush();
+        }
+        $em->remove($entry);
+        $em->flush();
+        return $this->redirectToRoute('blog_homepage');
+    }
 
 }

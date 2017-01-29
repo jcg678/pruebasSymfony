@@ -171,9 +171,17 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
-        // blog_add_entry
-        if ($pathinfo === '/entries/add') {
-            return array (  '_controller' => 'BlogBundle\\Controller\\EntryController::addAction',  '_route' => 'blog_add_entry',);
+        if (0 === strpos($pathinfo, '/entries')) {
+            // blog_add_entry
+            if ($pathinfo === '/entries/add') {
+                return array (  '_controller' => 'BlogBundle\\Controller\\EntryController::addAction',  '_route' => 'blog_add_entry',);
+            }
+
+            // blog_delete_entry
+            if (0 === strpos($pathinfo, '/entries/delete') && preg_match('#^/entries/delete/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'blog_delete_entry')), array (  '_controller' => 'BlogBundle\\Controller\\EntryController::deleteAction',));
+            }
+
         }
 
         // mi_homepage

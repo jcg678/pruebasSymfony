@@ -17,13 +17,18 @@
         <img src="{{ asset("uploads/"~entry.image) }}" width="100px" height="auto"/>
         {% endif %}
         <b>{{ entry.category.name }}</b>
+        <b>Autor: {{ entry.user.name }}</b>
         <i>
-        {% for et in entry.entryTag %}
-        {{ et.tag.name }},
-        {% endfor %}
+            {% for et in entry.entryTag %}
+            {{ et.tag.name }},
+            {% endfor %}
         </i>
         <div class="col-md-12">{{ entry.content }}</div>
-
+        {% if (app.user.id is defined) and (entry.user.id == app.user.id) %}
+        <p>
+            <a class="btn btn-danger" href="{{ path("blog_delete_entry",{"id":entry.id}) }}">Eliminar</a>
+        </p>
+        {% endif %}
     <hr/>
     {% endfor  %}
 
