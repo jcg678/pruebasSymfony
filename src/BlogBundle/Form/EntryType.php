@@ -40,8 +40,12 @@ class EntryType extends AbstractType
 
 
             )))
-            ->add('image',FileType::class,array("label"=>"Imagen","required"=>"required","attr"=>array(
-                "class"=>"form-surmname form-control",
+            ->add('image',FileType::class,array(
+                "label"=>"Imagen","required"=>"required",
+                "data_class"=> null,
+                "attr"=>array(
+                "class"=>"form-surmname form-control"
+
 
             )))
             ->add('category',EntityType::class,array(
