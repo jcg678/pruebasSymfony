@@ -5,6 +5,8 @@
 {{ form_start(form,{'enctype':'multipart/form-data'}) }}
         <img src="{{ asset("uploads/"~entry.image) }}" width="100px" height="auto"/>
 {{ form_widget(form.image) }}
+        <label>Eriquetas</label>
+        {{ form_widget(form.tags, {'value':tags}) }}
 {{ form_end(form) }}
     </div>
     <div class="clear-fix"></div>

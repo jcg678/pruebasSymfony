@@ -115,6 +115,16 @@ class EntryController extends Controller
         $entry_repo=$em->getRepository("BlogBundle:Entry");
         $category_repo=$em->getRepository("BlogBundle:Category");
         $entry=$entry_repo->find($id);
+        $tags="";
+        $total = $entry->getEntryTag();
+        foreach($total as $entryTag){
+
+
+                $tags.=$entryTag->getTag()->getName().",";
+
+
+        }
+        $tags = substr($tags, 0, -1);
         $form =$this->createForm(EntryType::class,$entry);
         $form->handleRequest($request);
         if($form->isSubmitted()){
@@ -141,6 +151,16 @@ class EntryController extends Controller
 
                 $flush=$em->flush();
 
+                $entry_tags_repo=$em->getRepository("BlogBundle:EntryTag");
+
+
+                $entry=$entry_repo->find($id);
+                $entry_tags =$entry_tags_repo->findBy(array('entry'=>$entry));
+                foreach($entry_tags as $entry_tag){
+                    $em->remove($entry_tag);
+                    $em->flush();
+                }
+
                 $entry_repo-> saveEntryTags(
                     $form->get("tags")->getData(),
                     $form->get("title")->getData(),
@@ -162,7 +182,8 @@ class EntryController extends Controller
         }
         return $this->render("BlogBundle:entry:edit.html.twig",[
            "form"=>$form->createView(),
-            "entry"=>$entry
+            "entry"=>$entry,
+            "tags"=>$tags
         ]);
     }
 
