@@ -16,16 +16,24 @@ class EntryController extends Controller
 
     }
 
-    public function indexAction(){
+    public function indexAction($page){
         $em = $this->getDoctrine()->getManager();
 
         $entry_repo=$em->getRepository("BlogBundle:Entry");
         $category_repo= $em->getRepository("BlogBundle:Category");
-        $entries=$entry_repo->findAll();
+        $pageSize= 5;
+        $entries=$entry_repo->getPaginateEntries($pageSize,$page);
+
+        $totalItems=count($entries);
+        $pagesCount=ceil($totalItems/$pageSize);
+
         $categories=$category_repo->findAll();
         return $this->render("BlogBundle:entry:index.html.twig",[
                 'entries'=>$entries,
-                'categories'=>$categories
+                'categories'=>$categories,
+                'totalItems'=>$totalItems,
+                'pagesCount' =>$pagesCount,
+                'page' => $page
             ]
 
             );

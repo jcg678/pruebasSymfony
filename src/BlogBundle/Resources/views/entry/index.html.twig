@@ -32,5 +32,24 @@
         {% endif %}
     <hr/>
     {% endfor  %}
+    <ul class="pagination">
+        {% if(page==1) %}
+        {% else %}
+            {% set page = page -1 %}
+        {%  endif %}
+
+
+
+        <li><a href="{{ path('blog_homepage', {"page":page}) }}">&laquo;</a></li>
+        {% for i in 1..pagesCount %}
+            <li><a href="{{ path('blog_homepage', {"page":i}) }}">{{ i }}</a></li>
+        {% endfor %}
+
+        {% if(page==pagesCount) %}
+        {% else %}
+            {% set page = page +1 %}
+        {%  endif %}
+        <li><a href="{{ path('blog_homepage', {"page":page}) }}">&raquo;</a></li>
+    </ul>
 
 {% endblock %}
