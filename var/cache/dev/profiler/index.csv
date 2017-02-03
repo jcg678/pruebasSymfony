@@ -844,3 +844,17 @@ d4ecaf,127.0.0.1,GET,http://localhost:8000/category/1/2,1486152824,,500
 23c914,127.0.0.1,GET,http://localhost:8000/category/1/2,1486152904,,200
 a29198,127.0.0.1,GET,http://localhost:8000/category/1/3,1486152907,,200
 b065f6,127.0.0.1,GET,http://localhost:8000/category/1/4,1486152910,,200
+268dd1,127.0.0.1,GET,http://localhost:8000/login,1486153174,,200
+e1c082,127.0.0.1,POST,http://localhost:8000/login_check,1486153201,,302
+641785,127.0.0.1,GET,http://localhost:8000/login,1486153202,,200
+feb02d,127.0.0.1,GET,http://localhost:8000/tags,1486153211,28e312,200
+28e312,127.0.0.1,GET,http://localhost:8000/tags,1486153211,,500
+eab9b7,127.0.0.1,GET,http://localhost:8000/tags,1486153274,,200
+ff5ed9,127.0.0.1,GET,http://localhost:8000/logout,1486153480,,302
+94e046,127.0.0.1,GET,http://localhost:8000/login,1486153482,,200
+271fb0,127.0.0.1,POST,http://localhost:8000/login_check,1486153488,,302
+ab5fd0,127.0.0.1,GET,http://localhost:8000/login,1486153489,,200
+156068,127.0.0.1,POST,http://localhost:8000/login_check,1486153602,,302
+9c5b78,127.0.0.1,GET,http://localhost:8000/login,1486153603,,200
+06c5b7,127.0.0.1,GET,http://localhost:8000/categories,1486153608,8dc8d5,200
+8dc8d5,127.0.0.1,GET,http://localhost:8000/categories,1486153608,,403

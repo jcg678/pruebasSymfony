@@ -122,7 +122,7 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
         }
 
         // blog_homepage
-        if (preg_match('#^/(?P<page>[^/]++)?$#s', $pathinfo, $matches)) {
+        if (0 === strpos($pathinfo, '/home') && preg_match('#^/home(?:/(?P<page>[^/]++))?$#s', $pathinfo, $matches)) {
             return $this->mergeDefaults(array_replace($matches, array('_route' => 'blog_homepage')), array (  '_controller' => 'BlogBundle\\Controller\\EntryController::indexAction',  'page' => 1,));
         }
 
