@@ -33,6 +33,9 @@ blog_delete_category:
 blog_edit_category:
     path: /categories/edit/{id}
     defaults: {_controller: BlogBundle:Category:edit }
+blog_read_category:
+    path: /category/{id}/{page}
+    defaults: {_controller: BlogBundle:Category:category, page:1 }
 blog_add_entry:
     path: /entries/add
     defaults: {_controller: BlogBundle:Entry:add}
@@ -43,3 +46,4 @@ blog_delete_entry:
 blog_edit_entry:
     path: /entries/edit/{id}
     defaults: {_controller: BlogBundle:Entry:edit }
+

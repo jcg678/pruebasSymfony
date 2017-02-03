@@ -103,4 +103,27 @@ class CategoryController extends Controller
 
         ]);
     }
+
+    public function categoryAction($id,$page){
+        $em = $this->getDoctrine()->getManager();
+        $category_repo=$em->getRepository("BlogBundle:Category");
+        $category=$category_repo->find($id);
+        $entry_repo=$em->getRepository("BlogBundle:Entry");
+        $entries=$entry_repo->getCategoryEntries($category,5,$page);
+        $totalItems=count($entries);
+        $pagesCount=ceil($totalItems/5);
+        return $this->render(
+            'BlogBundle:category:category.html.twig',[
+                "category"=>$category,
+                "categories"=>$category_repo->findAll(),
+                "entries"=>$entries,
+                "page"=>$page,
+                "page_m"=>$page,
+                "pagesCount"=>$pagesCount,
+                'totalItems'=>$totalItems,
+
+
+            ]
+        );
+    }
 }
