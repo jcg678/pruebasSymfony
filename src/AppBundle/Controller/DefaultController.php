@@ -25,6 +25,7 @@ class DefaultController extends Controller
         echo "<h1>Hello World</h1>";
         die();//para que nos pida una vista cuendo lo ejecutemos
     }
-    
+
+
     
 }

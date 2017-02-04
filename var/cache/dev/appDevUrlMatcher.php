@@ -193,6 +193,11 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
 
         }
 
+        // blog_lang
+        if (0 === strpos($pathinfo, '/lang') && preg_match('#^/lang/(?P<_locale>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'blog_lang')), array (  '_controller' => 'BlogBundle\\Controller\\DefaultController::langAction',));
+        }
+
         // mi_homepage
         if ($pathinfo === '/mi-bundle') {
             return array (  '_controller' => 'MiBundle\\Controller\\DefaultController::indexAction',  '_route' => 'mi_homepage',);
