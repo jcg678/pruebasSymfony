@@ -53,16 +53,15 @@ class EntryController extends Controller
                 $entry->setTitle($form->get("title")->getData());
                 $entry->setContent($form->get("content")->getData());
                 $entry->setStatus($form->get("status")->getData());
-
-
                 $file=$form["image"]->getData();
-                $ext=$file->guessExtension();
-                $file_name=time().".".$ext;
-
-                $file->move("uploads",$file_name);
-
-                $entry->setImage($file_name);
-
+                if(!empty($file) && $file!=null){
+                    $ext=$file->guessExtension();
+                    $file_name=time().".".$ext;
+                    $file->move("uploads",$file_name);
+                    $entry->setImage($file_name);
+                }else{
+                    $entry->setImage(null);
+                }
                 $category=$category_repo->find($form->get("category")->getData());
                 $entry->setCategory($category);
                 $user=$this->getUser();
@@ -123,6 +122,7 @@ class EntryController extends Controller
         $entry_repo=$em->getRepository("BlogBundle:Entry");
         $category_repo=$em->getRepository("BlogBundle:Category");
         $entry=$entry_repo->find($id);
+        $entry_image=$entry->getImage();
         $tags="";
         $total = $entry->getEntryTag();
         foreach($total as $entryTag){
@@ -137,18 +137,23 @@ class EntryController extends Controller
         $form->handleRequest($request);
         if($form->isSubmitted()){
             if($form->isValid()){
+                /*
                 $entry->setTitle($form->get("title")->getData());
                 $entry->setContent($form->get("content")->getData());
                 $entry->setStatus($form->get("status")->getData());
-
+                */
 
                 $file=$form["image"]->getData();
-                $ext=$file->guessExtension();
-                $file_name=time().".".$ext;
+                if(!empty($file) && $file!=null) {
+                    $ext = $file->guessExtension();
+                    $file_name = time() . "." . $ext;
 
-                $file->move("uploads",$file_name);
+                    $file->move("uploads", $file_name);
 
-                $entry->setImage($file_name);
+                    $entry->setImage($file_name);
+                }else{
+                    $entry->setImage($entry_image);
+                }
 
                 $category=$category_repo->find($form->get("category")->getData());
                 $entry->setCategory($category);
